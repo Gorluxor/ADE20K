@@ -110,5 +110,6 @@ def plot_polygon(img_name, info, show_obj=True, show_parts=False):
         pts = np.concatenate([poly['x'][:, None], poly['y'][:, None]], 1)[None, :]
         color = rgb(curr_color[1:])
         img = cv2.polylines(img, pts, True, color, thickness)
+        print(f'obj:{obj} (color:{color})')
     return img
 
